@@ -9,20 +9,53 @@
 				margin:0px;
 			}
 		</style>
-	</head>
-	<body style="background-color:#008080;">
-		<div>
-			<h1 style="font-family:Helvetica;">Menu</h1>
+		
+		<script language="javascript">
+			function changeBG() {
+				if(document.body.style.background == "rgb(0, 128, 128)") {
+					theme2()
+				}
+				else if(document.body.style.background == "rgb(255, 0, 255)") {
+					theme1()
+				}
+			}
 			
-			<p style="font-family:Helvetica;">- <a href="https://34202.hosts1.ma-cloud.nl/cheatsheet.html">Git Cheatsheet</a></p>
-			<p style="font-family:Helvetica;">- <a href="https://github.com/Mitchel2004">Github Profiel</a></p>
-			<p style="font-family:Helvetica;">- <a href="https://github.com/Mitchel2004/F1M1PYT">Python Achievements</a></p>
+			function theme1() {
+				document.getElementById("theme").style.backgroundColor = "rgb(192, 96, 0)"
+				document.body.style.background = "rgb(0, 128, 128)"
+				document.body.style.color = "rgb(0, 0, 0)"
+				document.body.style.fontFamily = "Helvetica"
+			
+			}
+			
+			function theme2() {
+				document.getElementById("theme").style.backgroundColor = "rgb(192, 96, 0)"
+				document.body.style.background = "rgb(255, 0, 255)"
+				document.body.style.color = "rgb(0, 0, 255)"
+				document.body.style.fontFamily = "Times New Roman"
+			
+			}
+		</script>
+	</head>
+	<body style="background:rgb(0, 128, 128); font-family:Helvetica; color:rgb(0, 0, 0);">
+		<div>
+			<h1>Menu</h1>
+			
+			<p>- <a href="https://34202.hosts1.ma-cloud.nl/cheatsheet.html">Git Cheatsheet</a></p>
+			<p>- <a href="https://github.com/Mitchel2004">Github Profiel</a></p>
+			<p>- <a href="https://github.com/Mitchel2004/F1M1PYT">Python Achievements</a></p>
+			<p>- <a href="https://34202.hosts1.ma-cloud.nl/mysterypage.html">Mystery Page</a></p>
 		</div>
 		<br>
 		<div>
-			<h2 style="font-family:Helvetica;">Content</h2>
+			<h2>Content</h2>
 			
-			<p style="font-family:Helvetica;">Hier kan je al mijn werk vinden dat ik heb gemaakt.</p>
+			<p>Hier kan je al mijn werk vinden dat ik heb gemaakt.</p>
+		</div>
+		<br>
+		<br>
+		<div>
+			<input type="button" onclick="changeBG()" value="Klik hier om de stijl te veranderen." id="theme" style="background:rgb(192, 96, 0)"/>
 		</div>
 	</body>
 </html>
